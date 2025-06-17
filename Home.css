@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&family=Exo+2:wght@400&display=swap');
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Exo 2', sans-serif;
+  background: radial-gradient(circle at center, #111827, #0f172a);
+  color: #f3f4f6;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.home-container {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.header .title {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 3.5rem;
+  color: #38bdf8;
+  text-shadow: 0 0 20px #38bdf8aa;
+  margin-top: 2px;
+  margin-bottom: 10px;
+}
+
+.header .description {
+  font-size: 1.2rem;
+  color: #94a3b8;
+  margin-bottom: 40px;
+}
+
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+}
+
+.card {
+  background: linear-gradient(145deg, #1e293b, #0f172a);
+  border: 1px solid #334155;
+  border-radius: 20px;
+  padding: 30px;
+  width: 300px;
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow:
+    0 0 35px rgba(59, 130, 246, 0.6),
+    0 0 10px #38bdf8aa inset;
+}
+
+.card h2 {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.8rem;
+  color: #38bdf8;
+  margin-bottom: 15px;
+}
+
+.card p {
+  color: #cbd5e1;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  border: 1px solid #475569;
+  background-color: #1e293b;
+  color: #f1f5f9;
+  font-size: 1rem;
+}
+
+.action-button {
+  padding: 12px;
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+  background-color: #f59e0b;
+  color: white;
+}
+
+.action-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Get Started Button Styles */
+.get-started-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 50px 0 60px 0;
+}
+
+.get-started-button {
+  padding: 16px 65px;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 600;
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #e0f2fe;
+  background: linear-gradient(135deg, #0ea5e9, #2563eb);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(14, 165, 233, 0.5);
+  transition: background 0.4s ease, box-shadow 0.4s ease, transform 0.3s ease;
+  overflow: hidden;
+  user-select: none;
+}
+
+.get-started-button:hover:not(:disabled) {
+  background: linear-gradient(135deg, #2563eb, #0ea5e9);
+  box-shadow: 0 8px 30px rgba(37, 99, 235, 0.7);
+  transform: scale(1.07);
+}
+
+.get-started-button:disabled {
+  cursor: default;
+  opacity: 0.8;
+}
+
+.get-started-button.loading {
+  pointer-events: none;
+  background: #2563eb;
+  box-shadow: 0 6px 15px rgba(37, 99, 235, 0.7);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  padding: 0 30px;
+  background: rgba(15, 23, 42, 0.85); /* dark translucent */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+}
+
+.logo-text {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #38bdf8;
+  text-shadow: 0 0 5px rgba(56, 189, 248, 0.5);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.nav-actions button {
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 600;
+  color: #f3f4f6;
+  border: 1px solid #475569;
+  border-radius: 8px;
+  padding: 6px 14px;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.nav-actions button:hover {
+  background-color: #1e293b;
+  box-shadow: 0 0 8px rgba(56, 189, 248, 0.4);
+}
+
+.profile-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #38bdf8;
+  transition: transform 0.3s ease;
+}
+
+.profile-icon:hover {
+  transform: scale(1.1);
+}
